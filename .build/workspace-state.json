@@ -1,0 +1,33 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "devenvironment ",
+          "kind" : "root",
+          "location" : "/Users/abiii/Desktop/Developerzone/Apple/DevEnvironment ",
+          "name" : "DevEnvironment "
+        },
+        "path" : "/Users/abiii/Desktop/Developerzone/Apple/DevEnvironment /.build/artifacts/devenvironment /Dev/Dev.xcframework",
+        "source" : {
+          "checksum" : "724005912b395cf4c822d6d093b1d6ec9c9bbd7e5fd2673522ee2dfa08739647",
+          "type" : "remote",
+          "url" : "https://github.com/abishekan143-glitch/DevEnvironment/releases/download/1.0.0/Dev.xcframework.zip"
+        },
+        "targetName" : "Dev"
+      }
+    ],
+    "dependencies" : [
+
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

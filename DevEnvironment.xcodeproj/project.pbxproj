@@ -23,7 +23,6 @@
 		4CBB847B2DFFDC5D00FCFC3A /* phpReplicas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB845E2DFFDC5D00FCFC3A /* phpReplicas.swift */; };
 		4CBB847C2DFFDC5D00FCFC3A /* AccessDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB844B2DFFDC5D00FCFC3A /* AccessDenied.swift */; };
 		4CBB847D2DFFDC5D00FCFC3A /* MyProfile_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84502DFFDC5D00FCFC3A /* MyProfile_iOS.swift */; };
-		4CBB847E2DFFDC5D00FCFC3A /* DevOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84592DFFDC5D00FCFC3A /* DevOps.swift */; };
 		4CBB847F2DFFDC5D00FCFC3A /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84682DFFDC5D00FCFC3A /* Validators.swift */; };
 		4CBB84802DFFDC5D00FCFC3A /* Bargraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84312DFFDC5D00FCFC3A /* Bargraph.swift */; };
 		4CBB84812DFFDC5D00FCFC3A /* LoginWithOTP_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB844F2DFFDC5D00FCFC3A /* LoginWithOTP_iOS.swift */; };
@@ -57,6 +56,52 @@
 		4CBB849F2DFFDC5D00FCFC3A /* VideoUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84452DFFDC5D00FCFC3A /* VideoUploader.swift */; };
 		84E6D6013052C5EE003A5681 /* Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E6D5F93052C5EE003A5681 /* Dev.framework */; };
 		84E6D6023052C5EE003A5681 /* Dev.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84E6D5F93052C5EE003A5681 /* Dev.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84E6D63B3052EB71003A5681 /* DevOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84592DFFDC5D00FCFC3A /* DevOps.swift */; };
+		84E6D63C3052EB71003A5681 /* DevOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84592DFFDC5D00FCFC3A /* DevOps.swift */; };
+		84E6D63D3052EBB2003A5681 /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84582DFFDC5D00FCFC3A /* DatabaseConnection.swift */; };
+		84E6D63E3052EBB9003A5681 /* SQLiteEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB845A2DFFDC5D00FCFC3A /* SQLiteEngine.swift */; };
+		84E6D63F3052EBBE003A5681 /* SQLizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB845B2DFFDC5D00FCFC3A /* SQLizers.swift */; };
+		84E6D6403052EBC3003A5681 /* cppReplicas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB845D2DFFDC5D00FCFC3A /* cppReplicas.swift */; };
+		84E6D6413052EBCA003A5681 /* phpReplicas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB845E2DFFDC5D00FCFC3A /* phpReplicas.swift */; };
+		84E6D6423052EBEA003A5681 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84612DFFDC5D00FCFC3A /* Notify.swift */; };
+		84E6D6433052EBEF003A5681 /* Quartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84622DFFDC5D00FCFC3A /* Quartz.swift */; };
+		84E6D6443052EBF3003A5681 /* QuickAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84632DFFDC5D00FCFC3A /* QuickAccess.swift */; };
+		84E6D6453052EBF9003A5681 /* Randomize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84642DFFDC5D00FCFC3A /* Randomize.swift */; };
+		84E6D6463052EBFE003A5681 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84652DFFDC5D00FCFC3A /* Security.swift */; };
+		84E6D6473052EC02003A5681 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84662DFFDC5D00FCFC3A /* Sender.swift */; };
+		84E6D6483052EC08003A5681 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84672DFFDC5D00FCFC3A /* UserInfo.swift */; };
+		84E6D6493052EC0E003A5681 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84682DFFDC5D00FCFC3A /* Validators.swift */; };
+		84E6D64B3052EC1A003A5681 /* AllColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84542DFFDC5D00FCFC3A /* AllColors.swift */; };
+		84E6D64C3052EC1F003A5681 /* Pagination_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84512DFFDC5D00FCFC3A /* Pagination_iOS.swift */; };
+		84E6D64D3052EC24003A5681 /* PDFViewer_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84522DFFDC5D00FCFC3A /* PDFViewer_iOS.swift */; };
+		84E6D64E3052EC28003A5681 /* MyProfile_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84502DFFDC5D00FCFC3A /* MyProfile_iOS.swift */; };
+		84E6D6503052EC31003A5681 /* LiquidGlass_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB844E2DFFDC5D00FCFC3A /* LiquidGlass_iOS.swift */; };
+		84E6D6513052EC36003A5681 /* Containers_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB844D2DFFDC5D00FCFC3A /* Containers_iOS.swift */; };
+		84E6D6523052EC3B003A5681 /* ContactOurDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB844C2DFFDC5D00FCFC3A /* ContactOurDeveloper.swift */; };
+		84E6D6533052EC40003A5681 /* AccessDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB844B2DFFDC5D00FCFC3A /* AccessDenied.swift */; };
+		84E6D6543052EC53003A5681 /* VideoUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84452DFFDC5D00FCFC3A /* VideoUploader.swift */; };
+		84E6D6553052EC60003A5681 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84442DFFDC5D00FCFC3A /* ImageUploader.swift */; };
+		84E6D6563052EC7B003A5681 /* FileUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84432DFFDC5D00FCFC3A /* FileUploader.swift */; };
+		84E6D6573052EC84003A5681 /* AudioUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84422DFFDC5D00FCFC3A /* AudioUploader.swift */; };
+		84E6D6583052EC90003A5681 /* SmartButton_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84402DFFDC5D00FCFC3A /* SmartButton_iOS.swift */; };
+		84E6D6593052EC98003A5681 /* RatingStars_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB843F2DFFDC5D00FCFC3A /* RatingStars_iOS.swift */; };
+		84E6D65A3052ECA0003A5681 /* ClassicStarRating_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB843E2DFFDC5D00FCFC3A /* ClassicStarRating_iOS.swift */; };
+		84E6D65B3052ECA7003A5681 /* CheckBox_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB843D2DFFDC5D00FCFC3A /* CheckBox_iOS.swift */; };
+		84E6D65C3052ECB0003A5681 /* BaloonSlider_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB843C2DFFDC5D00FCFC3A /* BaloonSlider_iOS.swift */; };
+		84E6D65D3052ECB7003A5681 /* Alert_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB843B2DFFDC5D00FCFC3A /* Alert_iOS.swift */; };
+		84E6D65E3052ECC2003A5681 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA40602E013D420000C8A1 /* DonutChart.swift */; };
+		84E6D65F3052ECCD003A5681 /* TwoLineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84372DFFDC5D00FCFC3A /* TwoLineGraph.swift */; };
+		84E6D6603052ECD6003A5681 /* ThreeDPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84362DFFDC5D00FCFC3A /* ThreeDPieChart.swift */; };
+		84E6D6613052ECDD003A5681 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84352DFFDC5D00FCFC3A /* PieChart.swift */; };
+		84E6D6623052ECE9003A5681 /* OneLineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84342DFFDC5D00FCFC3A /* OneLineGraph.swift */; };
+		84E6D6633052ECF1003A5681 /* MultiLineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84332DFFDC5D00FCFC3A /* MultiLineGraph.swift */; };
+		84E6D6643052ECF9003A5681 /* Bargraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB84312DFFDC5D00FCFC3A /* Bargraph.swift */; };
+		84E6D6673052EE01003A5681 /* SQLCipher in Frameworks */ = {isa = PBXBuildFile; productRef = 84E6D6663052EE01003A5681 /* SQLCipher */; };
+		84E6D66C3052FA1B003A5681 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D66B3052FA00003A5681 /* Background.swift */; };
+		84E6D66D3052FA1B003A5681 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D66B3052FA00003A5681 /* Background.swift */; };
+		84E6D66F3052FCE8003A5681 /* response_Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D66E3052FCE6003A5681 /* response_Query.swift */; };
+		84E6D6703052FCE8003A5681 /* response_Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D66E3052FCE6003A5681 /* response_Query.swift */; };
+		84E6D6713052FEB2003A5681 /* LoginWithOTP_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB844F2DFFDC5D00FCFC3A /* LoginWithOTP_iOS.swift */; };
 		F205C7DB3051F5B900DEAB39 /* SQLCipher in Frameworks */ = {isa = PBXBuildFile; productRef = F205C7DA3051F5B900DEAB39 /* SQLCipher */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +180,8 @@
 		4CBB846B2DFFDC5D00FCFC3A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4CBB846D2DFFDC5D00FCFC3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E6D5F93052C5EE003A5681 /* Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E6D66B3052FA00003A5681 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		84E6D66E3052FCE6003A5681 /* response_Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = response_Query.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -155,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E6D6673052EE01003A5681 /* SQLCipher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +290,8 @@
 				4CBB84502DFFDC5D00FCFC3A /* MyProfile_iOS.swift */,
 				4CBB84512DFFDC5D00FCFC3A /* Pagination_iOS.swift */,
 				4CBB84522DFFDC5D00FCFC3A /* PDFViewer_iOS.swift */,
+				84E6D66E3052FCE6003A5681 /* response_Query.swift */,
+				84E6D66B3052FA00003A5681 /* Background.swift */,
 			);
 			path = iOSFramework;
 			sourceTree = "<group>";
@@ -321,6 +371,13 @@
 			path = DevEnvironment;
 			sourceTree = "<group>";
 		};
+		84E6D6653052EE01003A5681 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3DB0E6D2D717BE4005AFA4C = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +386,7 @@
 				4CBB846E2DFFDC5D00FCFC3A /* DevEnvironment */,
 				84E6D5F93052C5EE003A5681 /* Dev.framework */,
 				84E6D5FA3052C5EE003A5681 /* Dev */,
+				84E6D6653052EE01003A5681 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -363,6 +421,7 @@
 			);
 			name = Dev;
 			packageProductDependencies = (
+				84E6D6663052EE01003A5681 /* SQLCipher */,
 			);
 			productName = Dev;
 			productReference = 84E6D5F93052C5EE003A5681 /* Dev.framework */;
@@ -458,6 +517,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E6D63D3052EBB2003A5681 /* DatabaseConnection.swift in Sources */,
+				84E6D64C3052EC1F003A5681 /* Pagination_iOS.swift in Sources */,
+				84E6D6643052ECF9003A5681 /* Bargraph.swift in Sources */,
+				84E6D63E3052EBB9003A5681 /* SQLiteEngine.swift in Sources */,
+				84E6D64B3052EC1A003A5681 /* AllColors.swift in Sources */,
+				84E6D6463052EBFE003A5681 /* Security.swift in Sources */,
+				84E6D6533052EC40003A5681 /* AccessDenied.swift in Sources */,
+				84E6D6713052FEB2003A5681 /* LoginWithOTP_iOS.swift in Sources */,
+				84E6D6433052EBEF003A5681 /* Quartz.swift in Sources */,
+				84E6D65D3052ECB7003A5681 /* Alert_iOS.swift in Sources */,
+				84E6D6613052ECDD003A5681 /* PieChart.swift in Sources */,
+				84E6D66F3052FCE8003A5681 /* response_Query.swift in Sources */,
+				84E6D6493052EC0E003A5681 /* Validators.swift in Sources */,
+				84E6D64D3052EC24003A5681 /* PDFViewer_iOS.swift in Sources */,
+				84E6D63F3052EBBE003A5681 /* SQLizers.swift in Sources */,
+				84E6D6593052EC98003A5681 /* RatingStars_iOS.swift in Sources */,
+				84E6D6623052ECE9003A5681 /* OneLineGraph.swift in Sources */,
+				84E6D65E3052ECC2003A5681 /* DonutChart.swift in Sources */,
+				84E6D65F3052ECCD003A5681 /* TwoLineGraph.swift in Sources */,
+				84E6D6563052EC7B003A5681 /* FileUploader.swift in Sources */,
+				84E6D6423052EBEA003A5681 /* Notify.swift in Sources */,
+				84E6D6583052EC90003A5681 /* SmartButton_iOS.swift in Sources */,
+				84E6D66C3052FA1B003A5681 /* Background.swift in Sources */,
+				84E6D6573052EC84003A5681 /* AudioUploader.swift in Sources */,
+				84E6D6633052ECF1003A5681 /* MultiLineGraph.swift in Sources */,
+				84E6D6543052EC53003A5681 /* VideoUploader.swift in Sources */,
+				84E6D6473052EC02003A5681 /* Sender.swift in Sources */,
+				84E6D6513052EC36003A5681 /* Containers_iOS.swift in Sources */,
+				84E6D6443052EBF3003A5681 /* QuickAccess.swift in Sources */,
+				84E6D6523052EC3B003A5681 /* ContactOurDeveloper.swift in Sources */,
+				84E6D63C3052EB71003A5681 /* DevOps.swift in Sources */,
+				84E6D6553052EC60003A5681 /* ImageUploader.swift in Sources */,
+				84E6D6403052EBC3003A5681 /* cppReplicas.swift in Sources */,
+				84E6D64E3052EC28003A5681 /* MyProfile_iOS.swift in Sources */,
+				84E6D65A3052ECA0003A5681 /* ClassicStarRating_iOS.swift in Sources */,
+				84E6D65C3052ECB0003A5681 /* BaloonSlider_iOS.swift in Sources */,
+				84E6D6603052ECD6003A5681 /* ThreeDPieChart.swift in Sources */,
+				84E6D6413052EBCA003A5681 /* phpReplicas.swift in Sources */,
+				84E6D6483052EC08003A5681 /* UserInfo.swift in Sources */,
+				84E6D6503052EC31003A5681 /* LiquidGlass_iOS.swift in Sources */,
+				84E6D65B3052ECA7003A5681 /* CheckBox_iOS.swift in Sources */,
+				84E6D6453052EBF9003A5681 /* Randomize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,13 +571,13 @@
 				4CBB84742DFFDC5D00FCFC3A /* RatingStars_iOS.swift in Sources */,
 				4CBB84752DFFDC5D00FCFC3A /* DevEnvironmentApp.swift in Sources */,
 				4CBB84762DFFDC5D00FCFC3A /* cppReplicas.swift in Sources */,
+				84E6D63B3052EB71003A5681 /* DevOps.swift in Sources */,
 				4CBB84772DFFDC5D00FCFC3A /* ContactOurDeveloper.swift in Sources */,
 				4CBB84782DFFDC5D00FCFC3A /* TwoLineGraph.swift in Sources */,
 				4CBB847A2DFFDC5D00FCFC3A /* PieChart.swift in Sources */,
 				4CBB847B2DFFDC5D00FCFC3A /* phpReplicas.swift in Sources */,
 				4CBB847C2DFFDC5D00FCFC3A /* AccessDenied.swift in Sources */,
 				4CBB847D2DFFDC5D00FCFC3A /* MyProfile_iOS.swift in Sources */,
-				4CBB847E2DFFDC5D00FCFC3A /* DevOps.swift in Sources */,
 				4CBB847F2DFFDC5D00FCFC3A /* Validators.swift in Sources */,
 				4CBB84802DFFDC5D00FCFC3A /* Bargraph.swift in Sources */,
 				4CBB84812DFFDC5D00FCFC3A /* LoginWithOTP_iOS.swift in Sources */,
@@ -487,6 +588,7 @@
 				4CBB84862DFFDC5D00FCFC3A /* Quartz.swift in Sources */,
 				4CBB84872DFFDC5D00FCFC3A /* ListViewer_iOS.swift in Sources */,
 				4CBB84882DFFDC5D00FCFC3A /* CheckBox_iOS.swift in Sources */,
+				84E6D66D3052FA1B003A5681 /* Background.swift in Sources */,
 				4CBB84892DFFDC5D00FCFC3A /* UserInfo.swift in Sources */,
 				4CBB848A2DFFDC5D00FCFC3A /* ClassicStarRating_iOS.swift in Sources */,
 				4CAA40612E013D420000C8A1 /* DonutChart.swift in Sources */,
@@ -503,6 +605,7 @@
 				4CBB84952DFFDC5D00FCFC3A /* Notify.swift in Sources */,
 				4CBB84962DFFDC5D00FCFC3A /* TableViewer_iOS.swift in Sources */,
 				4CBB84972DFFDC5D00FCFC3A /* DatabaseConnection.swift in Sources */,
+				84E6D6703052FCE8003A5681 /* response_Query.swift in Sources */,
 				4CBB84982DFFDC5D00FCFC3A /* DetailTransaction.swift in Sources */,
 				4CBB84992DFFDC5D00FCFC3A /* Randomize.swift in Sources */,
 				4CBB849A2DFFDC5D00FCFC3A /* FileUploader.swift in Sources */,
@@ -850,6 +953,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		84E6D6663052EE01003A5681 /* SQLCipher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F205C7D93051F5B900DEAB39 /* XCRemoteSwiftPackageReference "SQLCipher" */;
+			productName = SQLCipher;
+		};
 		F205C7DA3051F5B900DEAB39 /* SQLCipher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F205C7D93051F5B900DEAB39 /* XCRemoteSwiftPackageReference "SQLCipher" */;

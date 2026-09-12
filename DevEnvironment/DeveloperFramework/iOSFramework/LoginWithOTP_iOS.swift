@@ -7,7 +7,7 @@
 
 #if os(iOS)
 import SwiftUI
-public var response_Query: [String] = []
+//public var response_Query: [String] = []
 public struct LoginWithOTP<P1: View, P2: View, P3: View, P4: View, P5: View, P6: View, P7: View, P8: View, P9: View, P10: View, WorkAround: View>: View {
     let p1: P1
     let p2: P2
@@ -111,7 +111,7 @@ public struct LoginWithOTP<P1: View, P2: View, P3: View, P4: View, P5: View, P6:
                 .liquidGlass(cardWidth: 380)
                 .padding(.top, 250)
                 .padding(.bottom, 200)
-                NavigationLink(destination: DevEnvironment(p1: p1, p2: p2, p3: p3, p4: p4, p5: p5, p6: p6, p7: p7, p8: p8, p9: p9, p10: p10, workaround: workaround), isActive: $showAlert) {
+                if showAlert {
                     EmptyView()
                 }
             }
@@ -173,6 +173,125 @@ public struct LoginWithOTP<P1: View, P2: View, P3: View, P4: View, P5: View, P6:
             }
         }.resume()
     }
+    
+    
+    public func reVerifyOTP() -> String {
+
+        var projCode: [String] = []
+
+        _ = DF.reset()
+
+        if let data: [String: String] =
+            DF.select("otp from last_communication_with_server order by localcounti") {
+
+            let otp = validateOTP(data["otp"] ?? "").1
+
+            guard let url = URL(
+                string: "https://www.skynetbee.com/skynetbee/api/developer-environment/login-with-otp.php?otp=\(otp)"
+            ) else {
+                print("Invalid URL")
+                return ""
+            }
+
+            URLSession.shared.dataTask(with: url) { data, response, error in
+
+                if let error = error {
+                    print("Error fetching data: \(error)")
+                    return
+                }
+
+                guard let data = data else {
+                    print("No data received")
+                    return
+                }
+
+                if let responseString = String(data: data, encoding: .utf8) {
+
+                    DispatchQueue.main.async {
+
+                        print("Data received")
+
+                        response_Query =
+                            separateSQLQueries(from: responseString)
+
+                        print(response_Query)
+
+                        if response_Query.isEmpty ||
+                            response_Query[0] == "noaccess" {
+
+                            AccessDenied {
+                                print("hi")
+                            }
+
+                        } else {
+
+                            _ = DF.executeQuery(
+                                "DELETE FROM all_system_leaderboard;"
+                            )
+
+                            _ = DF.executeQuery(
+                                "DELETE FROM all_system_projects_assigned_to_developers;"
+                            )
+
+                            _ = DF.executeQuery(
+                                "DELETE FROM all_system_developer_details;"
+                            )
+
+                            _ = DF.executeQuery(
+                                "DELETE FROM last_communication_with_server;"
+                            )
+
+                            var a = 0
+
+                            while a < response_Query.count - 1 {
+
+                                _ = DF.executeQuery(response_Query[a])
+
+                                a += 1
+                            }
+
+                            _ = DF.executeQuery(
+                                "insert into last_communication_with_server (otp,currentdoe,currenttoe) values ('\(otp)','\(getDate())','\(getTime())');"
+                            )
+
+                            _ = DF.reset()
+
+                            while let projcode =
+                                DF.select(
+                                    "projectcode FROM all_system_projects_assigned_to_developers where completedat = '0000-00-00'"
+                                ) {
+
+                                let word = projcode["projectcode"]!
+
+                                projCode.append(word)
+                            }
+
+                            a = 0
+
+                            while a < projCode.count {
+
+                                fetchTables(projCode[a])
+
+                                a += 1
+                            }
+
+                            print("___________________________")
+                        }
+                    }
+                }
+
+            }.resume()
+
+            return ""
+
+        } else {
+
+            cl("Unknown Error : OTP not derivable but OTPNeverVerified returned false")
+
+            return "accessdenied"
+        }
+    }
+    
     public func fetchTables(_ code:String) {
         var response_Query2:[String] = []
         guard let url = URL(string: "https://www.skynetbee.com/skynetbee/api/developer-environment/get-tables-with-project-code.php?projectcode=\(code)") else {
@@ -320,6 +439,8 @@ public struct LoginWithOTP<P1: View, P2: View, P3: View, P4: View, P5: View, P6:
     }
 }
 
+
+
 public struct OTPTextField: View {
     @Binding var text: String
     var index: Int
@@ -368,6 +489,7 @@ public extension Bundle {
         return Bundle(for: DevEnvironmentResourceLocator.self)
     }
 }
+
 
 
 #endif

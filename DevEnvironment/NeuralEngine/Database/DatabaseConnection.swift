@@ -4,9 +4,17 @@
 //
 //  Created by Raghul S on 28/02/25.
 //
-
 import Foundation
-@_implementationOnly import SQLCipher
+import SQLCipher
+
+private typealias SQLite3Database = OpaquePointer
+
+@_silgen_name("sqlite3_key")
+private func sqlcipher_key(
+    _ db: SQLite3Database?,
+    _ key: UnsafeRawPointer?,
+    _ keyLength: Int32
+) -> Int32
 
 public class DatabaseConnectionEstablisher {
     public var db: OpaquePointer? = nil
@@ -47,7 +55,7 @@ public class DatabaseConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to set key for database : NeuralMemory")
                 sqlite3_close(db)
                 return
@@ -103,7 +111,7 @@ public class DatabaseConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to re-set key for database : NeuralMemory")
                 sqlite3_close(db)
                 return
@@ -200,7 +208,7 @@ public class DevOpsConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to set key for database : DevOps")
                 sqlite3_close(db)
                 return
@@ -264,7 +272,7 @@ public class DevOpsConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to re-set key for database : DevOps")
                 sqlite3_close(db)
                 return
@@ -410,7 +418,7 @@ public class DeviceFingerprintConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to set key for database : DeviceFingerprint")
                 sqlite3_close(db)
                 return
@@ -643,7 +651,7 @@ public class DeviceFingerprintConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to re-set key for database : DeviceFingerprint")
                 sqlite3_close(db)
                 return
@@ -808,7 +816,7 @@ public class AttentionRequireConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to set key for database : DeviceFingerprint")
                 sqlite3_close(db)
                 return
@@ -1041,7 +1049,7 @@ public class AttentionRequireConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to re-set key for database : DeviceFingerprint")
                 sqlite3_close(db)
                 return
@@ -1205,7 +1213,7 @@ public class NeuralMemoryConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to set key for database : DeviceFingerprint")
                 sqlite3_close(db)
                 return
@@ -1438,7 +1446,7 @@ public class NeuralMemoryConnectionEstablisher {
             }
 
             let key = "123"
-            if sqlite3_key(db, key, Int32(key.count)) != SQLITE_OK {
+            if sqlcipher_key(db, key, Int32(key.count)) != SQLITE_OK {
                 print("Unable to re-set key for database : DeviceFingerprint")
                 sqlite3_close(db)
                 return
@@ -1627,7 +1635,7 @@ public class AppleAlertsConnectionEstablisher {
             // SQLCipher key
             let key = "123"
 
-            if sqlite3_key(
+            if sqlcipher_key(
                 db,
                 key,
                 Int32(key.utf8.count)
@@ -1731,7 +1739,7 @@ public class AppleAlertsConnectionEstablisher {
 
             let key = "123"
 
-            if sqlite3_key(
+            if sqlcipher_key(
                 db,
                 key,
                 Int32(key.utf8.count)
