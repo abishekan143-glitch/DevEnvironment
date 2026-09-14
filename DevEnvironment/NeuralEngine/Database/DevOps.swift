@@ -146,18 +146,21 @@ public func cl<T>(
     file: String = #file
 ) {
     
-    let databasePath = FileManager.default
-        .urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-        .appendingPathComponent("DevOps.sqlite3")
-        .path
-
-    print("open -R \"\(databasePath)\"")
+ 
  
     var m = String(describing: msg)
 
     if m == "Reached Line $line : Iterated $i times" {
         m = "Reached Line \(line)"
     }
+
+    // ADD THIS
+    let databasePath = FileManager.default
+        .urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        .appendingPathComponent("DevOps.sqlite3")
+        .path
+
+    print("open -R \"\(databasePath)\"")
 
     let filename = file.split(separator: "/").last ?? "No File Name"
 
@@ -202,7 +205,7 @@ public func cl<T>(
             clPrevLine = line
             clPrevMsg = m
 
-            print("\(filename) : \\\(className)\\\(function)")
+            print("\(filename) :\\\(className)\\\(function)")
             print("\(type) : On line \(line) : \(m)")
         }
 
@@ -214,7 +217,7 @@ public func cl<T>(
                 clPrevLine = line
                 clPrevMsg = m
 
-                print("\(filename) : \\\(className)\\\(function)")
+                print("\(filename) :\\\(className)\\\(function)")
                 print("\(type) : On line \(line) : \(m)")
             }
 
@@ -222,7 +225,7 @@ public func cl<T>(
 
                 clIterator += 1
 
-                print("\(filename) : \\\(className)\\\(function)")
+                print("\(filename) :\\\(className)\\\(function)")
                 print("\(type) : On line \(line) : \(m) : Iteration \(clIterator)")
             }
         }
@@ -288,6 +291,13 @@ public func cl<T>(
         m = "Reached Line \(line)"
     }
 
+    let databasePath = FileManager.default
+        .urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        .appendingPathComponent("DevOps.sqlite3")
+        .path
+
+    print("open -R \"\(databasePath)\"")
+
     let filename = file.split(separator: "/").last ?? "No File Name"
 
 
@@ -304,7 +314,7 @@ public func cl<T>(
         clPrevMsg = m
 
         print("\(type) : --------------------------")
-        print("\(filename) : \\\(className)\\\(function)")
+        print("\(filename) :\\\(className)\\\(function)")
         print("\(type) : On line \(line) : \(m)")
     }
 
@@ -323,7 +333,7 @@ public func cl<T>(
             clPrevLine = line
             clPrevMsg = m
 
-            print("\(filename) : \\\(className)\\\(function)")
+            print("\(filename) :\\\(className)\\\(function)")
             print("\(type) : On line \(line) : \(m)")
         }
 
@@ -335,7 +345,7 @@ public func cl<T>(
                 clPrevLine = line
                 clPrevMsg = m
 
-                print("\(filename) : \\\(className)\\\(function)")
+                print("\(filename) :\\\(className)\\\(function)")
                 print("\(type) : On line \(line) : \(m)")
             }
 
@@ -343,7 +353,7 @@ public func cl<T>(
 
                 clIterator += 1
 
-                print("\(filename) : \\\(className)\\\(function)")
+                print("\(filename) :\\\(className)\\\(function)")
                 print("\(type) : On line \(line) : \(m) : Iteration \(clIterator)")
             }
         }
@@ -430,7 +440,7 @@ public func el<T>(
         elPrevMsg = m
 
         print("\(type) : --------------------------")
-        print("\(filename) : \\\(className)\\\(function)")
+        print("\(filename) :\\\(className)\\\(function)")
         print("\(type) : On line \(line) : \(m)")
     }
 
@@ -450,7 +460,7 @@ public func el<T>(
             elPrevLine = line
             elPrevMsg = m
 
-            print("\(filename) : \\\(className)\\\(function)")
+            print("\(filename) :\\\(className)\\\(function)")
             print("\(type) : On line \(line) : \(m)")
         }
 
@@ -458,7 +468,7 @@ public func el<T>(
 
             elIterator += 1
 
-            print("\(filename) : \\\(className)\\\(function)")
+            print("\(filename) :\\\(className)\\\(function)")
             print("\(type) : On line \(line) : \(m) : Iteration \(elIterator)")
         }
     }
@@ -543,7 +553,7 @@ public func el<T>(
         elPrevMsg = m
 
         print("\(type) : --------------------------")
-        print("\(filename) : \\\(className)\\\(function)")
+        print("\(filename) :\\\(className)\\\(function)")
         print("\(type) : On line \(line) : \(m)")
     }
 
@@ -567,7 +577,7 @@ public func el<T>(
             elPrevLine = line
             elPrevMsg = m
 
-            print("\(filename) : \\\(className)\\\(function)")
+            print("\(filename) :\\\(className)\\\(function)")
             print("\(type) : On line \(line) : \(m)")
         }
 
@@ -576,7 +586,7 @@ public func el<T>(
 
             elIterator += 1
 
-            print("\(filename) : \\\(className)\\\(function)")
+            print("\(filename) :\\\(className)\\\(function)")
             print("\(type) : On line \(line) : \(m) : Iteration \(elIterator)")
         }
     }
