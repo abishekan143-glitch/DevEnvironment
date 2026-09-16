@@ -140,7 +140,7 @@ var hasPrintedDatabasePath = false
 // MARK: - CL With Object
 
 public func cl<T>(
-    _ object: Any? = nil,
+    object: Any,
     _ msg: T = "Reached Line $line : Iterated $i times",
     type: String = "Quick Print",
     line: Int = #line,
@@ -168,13 +168,9 @@ public func cl<T>(
     }
     let filename = file.split(separator: "/").last ?? "No File Name"
 
-    let className: String
+   
 
-    if let object = object {
-        className = String(describing: Swift.type(of: object))
-    } else {
-        className = "nil"
-    }
+    let className = String(describing: Swift.type(of: object))
 
 
     // FILE CHANGED
