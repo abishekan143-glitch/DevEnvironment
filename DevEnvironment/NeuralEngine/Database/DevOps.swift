@@ -257,34 +257,17 @@ public func cl<T>(
 
 // MARK: - CL Without Object
 
-public func cl<T>(
-    _ msg: T = "Reached Line $line : Iterated $i times",
+public func cl(
+    _ objects: Any...,
     type: String = "Quick Print",
     line: Int = #line,
     function: String = #function,
     file: String = #file
 ) {
-
     var m: String
-
     var className = "Self isnt Passed"
 
-    let mirror = Mirror(reflecting: msg)
-
-    if mirror.displayStyle == .class {
-
-        className = String(describing: Swift.type(of: msg))
-
-        m = mirror.children
-            .map {
-                String(describing: $0.value)
-            }
-            .joined(separator: ", ")
-
-    } else {
-
-        m = String(describing: msg)
-    }
+    m = String(describing: objects)
 
 
     if m == "Reached Line $line : Iterated $i times" {
