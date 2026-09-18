@@ -25,7 +25,7 @@ let package = Package(
         .binaryTarget(
             name: "Dev",
             url: "https://github.com/abishekan143-glitch/DevEnvironment/releases/download/1.1.5/Dev.xcframework.zip",
-            checksum: "572b2aa9ff2d6a537b4d02a54aa7e598ffa9407709df95cf3d6a70cfb717b924"
+            checksum: "c0c98602600bd62599af7affa9d054eccef66df25a480d5067d6bca18f16041d"
         )
     ]
 )

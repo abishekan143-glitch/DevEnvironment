@@ -267,7 +267,8 @@ public func cl(
     var m: String
     var className = "Self isnt Passed"
 
-    m = String(describing: objects)
+    m = objects.map { String(describing: $0) }
+        .joined(separator: ", ")
 
 
     if m == "Reached Line $line : Iterated $i times" {
@@ -300,7 +301,7 @@ public func cl(
         clPrevMsg = m
 
         print("\(type) : --------------------------")
-        print("\(type) : \(filename) : \(className) : \(function)")
+       
         print("\(type) : On line \(line) : \(m)")
     }
 
